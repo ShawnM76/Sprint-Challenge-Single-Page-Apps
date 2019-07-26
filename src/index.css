@@ -38,3 +38,15 @@ header h1 {
   text-align: center;
 
 }
+
+a {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+

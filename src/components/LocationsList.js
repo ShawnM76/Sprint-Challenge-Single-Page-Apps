@@ -5,9 +5,10 @@ import LocationCard from './LocationCard.js';
 export default function LocationsList() {
     const [location, setLocation] = useState([])
 
-    useEffect(() => {
+    useEffect((props) => {
+       
         Axios
-            .get('https://rickandmortyapi.com/api/location/')
+            .get(`https://rickandmortyapi.com/api/location/`)
             .then(res => {
                 const infoLocation = res.data.results;
                 setLocation(res.data.results);
