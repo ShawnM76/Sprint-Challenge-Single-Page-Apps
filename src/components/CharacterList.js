@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
+import CharacterCard from "./CharacterCard.js";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -24,8 +25,11 @@ export default function CharacterList() {
 
   
   return <section className='character-list grid-view'>
-
-      <h2>TODO: `array.map()` over your state here!</h2>
+      <div>
+        {character.map(character => (
+          <CharacterCard key={character} character={character} />
+        ))}
+      </div>
     </section>
 
 }
