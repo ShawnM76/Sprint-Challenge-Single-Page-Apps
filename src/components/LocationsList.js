@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-
+import LocationCard from './LocationCard.js';
 
 export default function LocationsList() {
     const [location, setLocation] = useState([])
@@ -20,6 +20,10 @@ export default function LocationsList() {
     }, [])
 
     return <section className='character-list grid-view'>
-        <h2>This is location</h2>
+        <div>
+        {location.map(location => (
+          <LocationCard key={location} location={location} />
+        ))}
+        </div>
     </section>
 }
